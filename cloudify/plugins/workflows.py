@@ -154,7 +154,7 @@ def _install_node_instances(ctx, node_instances, intact_nodes,
     tasks = InstallationTasksReferences()
     for instance in node_instances:
         tasks.send_event_creating[instance.id] = instance.send_event(
-            'Creating node')
+            'Hey Creating node')
         tasks.set_state_creating[instance.id] = instance.set_state('creating')
         tasks.set_state_started[instance.id] = instance.set_state('started')
 

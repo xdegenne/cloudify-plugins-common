@@ -61,7 +61,7 @@ class NodeInstallationTasksSequenceCreator(object):
             )),
             forkjoin(
                 instance.set_state('configuring'),
-                instance.send_event('Configuring node')
+                instance.send_event('Hey Configuring node')
             ),
             instance.execute_operation(
                 'cloudify.interfaces.lifecycle.configure'),
@@ -72,7 +72,7 @@ class NodeInstallationTasksSequenceCreator(object):
             )),
             forkjoin(
                 instance.set_state('starting'),
-                instance.send_event('Starting node')
+                instance.send_event('Hey Starting node')
             ),
             instance.execute_operation('cloudify.interfaces.lifecycle.start'))
 

@@ -381,7 +381,7 @@ def _execute_workflow_function(ctx, func, args, kwargs):
 def _send_workflow_started_event(ctx):
     ctx.internal.send_workflow_event(
         event_type='workflow_started',
-        message="Starting '{0}' workflow execution".format(ctx.workflow_id))
+        message="Hey Starting '{0}' workflow execution".format(ctx.workflow_id))
 
 
 def _send_workflow_succeeded_event(ctx):
